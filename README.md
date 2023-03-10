@@ -5,3 +5,15 @@
 ```
 ssh -L 0.0.0.0:6443:192.168.123.245:6443 jump
 ```
+
+## Config
+```
+Host dev
+  HostName 192.168.123.245
+  User root
+  ProxyJump jump
+
+Host jump
+  HostName 10.121.218.245
+  User root
+```
